@@ -1,16 +1,58 @@
-# React + Vite
+# Movie Recommendation System 🎬
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive, and dynamic Movie Recommendation Web Application built with React and Vite. It features a premium Beige & Maroon glassmorphism aesthetic and allows users to interactively discover new movies, find similar recommendations, and build their own custom local movie collection.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Discover Movies:** Filter movies dynamically by Genre, Industry, and Actor.
+- **Find Similar Matches:** Search for a movie you love to instantly get a curated list of similar movies based on intersecting genres and shared cast members.
+- **Custom Movie Collection:** Add your own favorite movies to the database via an intuitive form. Custom movies persist locally in your browser!
+- **Real TMDB Posters:** Automatically fetches real-life high-quality movie posters from The Movie Database (TMDB) via their API.
+- **Stylized Fallbacks:** For movies lacking poster URLs or offline custom movies, beautifully generated gradient thumbnails represent the movie title.
 
-## React Compiler
+## 🛠️ Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend Framework:** React (via Vite)
+- **Routing:** React Router v6
+- **Data Parsing:** PapaParse (for handling massive, local `movies.csv` databases dynamically)
+- **Styling:** Vanilla CSS (Glassmorphism design, CSS variables, CSS grid/flexbox)
+- **Icons:** Lucide React
 
-## Expanding the ESLint configuration
+## 🚀 Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 1. Prerequisites
+Ensure you have the following installed:
+- [Node.js](https://nodejs.org/) (v16.0 or higher)
+- NPM or regular package manager
+
+### 2. Clone and Install
+Clone the repository and install all dependencies:
+```bash
+git clone https://github.com/Achu80/Movie-Recommendation-.git
+cd Movie-Recommendation-
+npm install
+```
+
+### 3. Environment Variables (API Key)
+To enable real movie poster fetching, you need a free API Key from [TMDB](https://www.themoviedb.org/). 
+Create a file named `.env` in the root directory and add your key:
+```env
+VITE_TMDB_API_KEY=your_tmdb_api_key_here
+```
+*(If you don't provide an API key, the app gracefully falls back to dynamic colored thumbnails!)*
+
+### 4. Data Source
+Ensure you have the `movies.csv` dataset placed inside the `public/` directory. The application parses this asynchronously when you load the app.
+
+### 5. Run the Application!
+Start the local Vite development server:
+```bash
+npm run dev
+```
+Open your browser to `http://localhost:5173/` and enjoy!
+
+## 🤝 Contributing
+Contributions, issues, and feature requests are welcome. Feel free to check the issues page if you want to contribute.
+
+## 📝 License
+This project is open-source and free to use.
